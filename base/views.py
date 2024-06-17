@@ -23,7 +23,10 @@ rooms = [
     },
 ]
 '''
-
+def logoutUser(request):
+    logout(request)
+    return redirect('home')
+    
 def loginPage(request):
     if request.method == 'POST':
         username = request.POST.get('username')
